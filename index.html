@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#101a2b" />
+    <title>Snow Leap — Mini Runner</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <main class="page">
+      <header class="topbar">
+        <a class="brand" href="#" aria-label="Little Leap home">
+          <span class="brand-mark" aria-hidden="true">❄</span>
+          <span>snow<span class="brand-light">leap</span></span>
+        </a>
+        <span class="topbar-note"><span class="status-dot"></span> FRESH POWDER. FAST FEET.</span>
+      </header>
+
+      <section class="game-section" aria-labelledby="game-title">
+        <div class="intro">
+          <p class="eyebrow">BUNDLE UP. THE ADVENTURE STARTS HERE.</p>
+          <h1 id="game-title">Chase the <span>chill.</span></h1>
+          <p class="intro-copy">Dash through the snow, dodge icy obstacles, and collect winter power-ups.</p>
+        </div>
+
+        <div class="game-card">
+          <div class="game-toolbar">
+            <div class="game-label">
+              <span class="live-indicator" aria-hidden="true"></span>
+              <span>FROSTY PEAKS // ENDLESS RUN</span>
+            </div>
+            <label class="difficulty-control" for="difficulty">
+              <span>MODE</span>
+              <select id="difficulty" aria-label="Choose difficulty">
+                <option value="easy">Easy</option>
+                <option value="normal" selected>Normal</option>
+                <option value="hard">Hard</option>
+              </select>
+            </label>
+            <div class="scoreboard" aria-label="Game score">
+              <div class="score-box">
+                <span class="score-caption">SCORE</span>
+                <span class="score-number" id="score">0000</span>
+              </div>
+              <span class="score-divider" aria-hidden="true"></span>
+              <div class="score-box best-box">
+                <span class="score-caption">BEST</span>
+                <span class="score-number" id="best">0000</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="game-stage" id="game-stage">
+            <canvas id="game-canvas" aria-label="Mini Runner game. Jump to avoid obstacles."></canvas>
+            <div class="game-overlay" id="game-overlay">
+              <div class="overlay-content">
+                <span class="overlay-emoji" id="overlay-emoji" aria-hidden="true">✦</span>
+                <p class="overlay-kicker" id="overlay-kicker">FROSTY PEAKS ARE CALLING</p>
+                <h2 id="overlay-title">Ready to hit the snow?</h2>
+                <p class="overlay-copy" id="overlay-copy">Jump over icy logs and collect flight, shield, and gem power-ups.</p>
+                <button class="play-button" id="play-button" type="button">
+                  <span id="button-label">Start running</span>
+                  <span aria-hidden="true">→</span>
+                </button>
+                <p class="keyboard-hint">PRESS <kbd>SPACE</kbd> OR <kbd>↑</kbd> TO JUMP</p>
+              </div>
+            </div>
+            <div class="run-status" id="run-status" aria-live="polite">
+              <span class="status-icon" aria-hidden="true">◆</span>
+              <span id="power-status">POWER-UPS: FLIGHT · SHIELD · GEMS</span>
+            </div>
+            <div class="jump-hint" id="jump-hint" aria-hidden="true">
+              <span>↑</span> SPACE TO JUMP
+            </div>
+          </div>
+
+          <div class="game-footer">
+            <span><span class="footer-sparkle" aria-hidden="true">✳</span> SPEED RISES WITH YOUR SCORE</span>
+            <span class="footer-right">GEMS +50 PTS · SHIELD = ONE FREE HIT</span>
+          </div>
+        </div>
+
+        <p class="mobile-hint"><span aria-hidden="true">☝</span> Tap to jump · Collect the glowing power-ups</p>
+      </section>
+
+      <footer class="page-footer">
+        <span>THREE MODES. ENDLESS WINTER.</span>
+        <span>SPACE / ↑ / W TO JUMP</span>
+      </footer>
+    </main>
+  </body>
+</html>
